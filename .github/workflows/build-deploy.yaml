@@ -1,0 +1,14 @@
+name: Docker Build Deploy
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: run shell script
+      run: echo coomit hash is ${{ github.sha }}
+    - name: Buid the Docker Image
+      run: docker build . --file Dockerfile --tag my--image-name:{{ github.sha }}
+   
