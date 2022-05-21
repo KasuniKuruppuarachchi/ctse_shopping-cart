@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
     - name: shop-order-pod
-      image: kasunidocker/ctse-app
+      image: kasunidocker/ctse-order
       ports:
         - containerPort: 3000
